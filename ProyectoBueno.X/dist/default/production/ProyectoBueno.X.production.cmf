@@ -1,0 +1,293 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/production/7segmentos.o
+resetvector CODE 0 0 0 A5 2 1
+config CONFIG 4 2007 2007 2 2 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 20-6F 1
+RAM A0-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 20-6F 1
+BANK1 A0-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST A5-1FFF 2
+ENTRY A5-1FFF 2
+IDLOC 2000-2003 2
+CODE A5-1FFF 2
+SFR3 180-18F 1
+COMMON 70-7F 1
+EEDATA 2100-21FF 2
+STRCODE A5-1FFF 2
+STRING A5-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/production/7segmentos.o
+0 resetvector CODE >55:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+5 resetvector CODE >59:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+6 resetvector CODE >60:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+7 resetvector CODE >61:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+8 resetvector CODE >62:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+9 resetvector CODE >63:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+A resetvector CODE >64:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+B resetvector CODE >65:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+C resetvector CODE >66:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+D resetvector CODE >67:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+E resetvector CODE >68:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+F resetvector CODE >70:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+10 resetvector CODE >71:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+11 resetvector CODE >72:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+12 resetvector CODE >73:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+13 resetvector CODE >74:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+14 resetvector CODE >75:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+15 resetvector CODE >76:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+16 resetvector CODE >77:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+17 resetvector CODE >78:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+18 resetvector CODE >79:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+19 resetvector CODE >80:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+1A resetvector CODE >81:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+1B resetvector CODE >84:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+1C resetvector CODE >85:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+1D resetvector CODE >86:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+1E resetvector CODE >87:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+1F resetvector CODE >88:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+20 resetvector CODE >89:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+21 resetvector CODE >90:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+22 resetvector CODE >91:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+23 resetvector CODE >92:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+24 resetvector CODE >93:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+25 resetvector CODE >94:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+26 resetvector CODE >95:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+27 resetvector CODE >96:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+28 resetvector CODE >97:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+29 resetvector CODE >98:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+2A resetvector CODE >99:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+2B resetvector CODE >100:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+2C resetvector CODE >101:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+2D resetvector CODE >102:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+2E resetvector CODE >105:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+2F resetvector CODE >106:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+30 resetvector CODE >107:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+31 resetvector CODE >108:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+32 resetvector CODE >109:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+33 resetvector CODE >110:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+34 resetvector CODE >111:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+35 resetvector CODE >112:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+36 resetvector CODE >115:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+37 resetvector CODE >116:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+38 resetvector CODE >117:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+39 resetvector CODE >118:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+3A resetvector CODE >119:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+3B resetvector CODE >120:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+3C resetvector CODE >121:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+3D resetvector CODE >122:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+3E resetvector CODE >123:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+3F resetvector CODE >124:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+40 resetvector CODE >125:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+41 resetvector CODE >126:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+42 resetvector CODE >127:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+43 resetvector CODE >128:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+44 resetvector CODE >129:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+45 resetvector CODE >130:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+46 resetvector CODE >131:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+47 resetvector CODE >132:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+48 resetvector CODE >133:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+49 resetvector CODE >134:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+4A resetvector CODE >135:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+4B resetvector CODE >136:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+4C resetvector CODE >138:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+4D resetvector CODE >139:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+4E resetvector CODE >140:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+4F resetvector CODE >141:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+50 resetvector CODE >142:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+51 resetvector CODE >143:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+52 resetvector CODE >144:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+53 resetvector CODE >145:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+54 resetvector CODE >146:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+55 resetvector CODE >147:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+56 resetvector CODE >148:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+57 resetvector CODE >149:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+58 resetvector CODE >150:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+59 resetvector CODE >151:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+5A resetvector CODE >152:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+5B resetvector CODE >155:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+5C resetvector CODE >156:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+5D resetvector CODE >157:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+5E resetvector CODE >158:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+5F resetvector CODE >159:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+60 resetvector CODE >160:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+61 resetvector CODE >161:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+62 resetvector CODE >162:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+63 resetvector CODE >163:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+64 resetvector CODE >164:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+65 resetvector CODE >165:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+66 resetvector CODE >166:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+67 resetvector CODE >167:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+68 resetvector CODE >168:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+69 resetvector CODE >169:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+6A resetvector CODE >170:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+6B resetvector CODE >171:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+6C resetvector CODE >172:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+6D resetvector CODE >173:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+6E resetvector CODE >174:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+6F resetvector CODE >175:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+70 resetvector CODE >176:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+71 resetvector CODE >177:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+72 resetvector CODE >178:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+73 resetvector CODE >179:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+74 resetvector CODE >180:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+75 resetvector CODE >181:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+76 resetvector CODE >182:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+77 resetvector CODE >183:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+78 resetvector CODE >187:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+79 resetvector CODE >188:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+7A resetvector CODE >189:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+7B resetvector CODE >190:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+7C resetvector CODE >191:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+7D resetvector CODE >194:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+7E resetvector CODE >195:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+7F resetvector CODE >196:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+80 resetvector CODE >197:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+81 resetvector CODE >198:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+82 resetvector CODE >201:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+83 resetvector CODE >202:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+84 resetvector CODE >203:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+85 resetvector CODE >204:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+86 resetvector CODE >205:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+87 resetvector CODE >208:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+88 resetvector CODE >211:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+89 resetvector CODE >212:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+8A resetvector CODE >213:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+8B resetvector CODE >214:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+8C resetvector CODE >217:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+8D resetvector CODE >218:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+8E resetvector CODE >221:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+8F resetvector CODE >222:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+90 resetvector CODE >223:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+91 resetvector CODE >224:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+92 resetvector CODE >227:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+93 resetvector CODE >228:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+94 resetvector CODE >229:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+95 resetvector CODE >232:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+96 resetvector CODE >233:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+97 resetvector CODE >234:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+98 resetvector CODE >235:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+99 resetvector CODE >236:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+9A resetvector CODE >239:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+9B resetvector CODE >240:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+9C resetvector CODE >241:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+9D resetvector CODE >242:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+9E resetvector CODE >243:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+9F resetvector CODE >244:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+A0 resetvector CODE >245:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+A1 resetvector CODE >246:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+A2 resetvector CODE >247:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+A3 resetvector CODE >248:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+A4 resetvector CODE >249:C:\Users\yaeli\MPLABXProjects\ProyectoBueno.X\7segmentos.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Hspace_0 A5 0 ABS 0 - -
+__Hspace_1 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 4010 0 ABS 0 - -
+__Hudata_bank0 0 0 ABS 0 udata_bank0 -
+__Hudata_bank1 0 0 ABS 0 udata_bank1 -
+__Hudata_bank2 0 0 ABS 0 udata_bank2 -
+__Hudata_bank3 0 0 ABS 0 udata_bank3 -
+__L__absolute__ 0 0 ABS 0 __absolute__ -
+__Hedata 0 0 ABS 0 edata -
+__Hudata 0 0 ABS 0 udata -
+__Hconfig 4012 0 CONFIG 4 config -
+__Ledata 0 0 ABS 0 edata -
+__Ludata 0 0 ABS 0 udata -
+__Hcode 0 0 ABS 0 code -
+__Hdata 0 0 ABS 0 data -
+__Lcode 0 0 ABS 0 code -
+__Ldata 0 0 ABS 0 data -
+__S0 0 0 ABS 0 - -
+__S1 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Lresetvector 0 0 ABS 0 resetvector -
+__Lconfig 0 0 CONFIG 4 config -
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__Hresetvector 0 0 ABS 0 resetvector -
+__Ludata_bank0 0 0 ABS 0 udata_bank0 -
+__Ludata_bank1 0 0 ABS 0 udata_bank1 -
+__Ludata_bank2 0 0 ABS 0 udata_bank2 -
+__Ludata_bank3 0 0 ABS 0 udata_bank3 -
+__H__absolute__ 0 0 ABS 0 __absolute__ -
+__Hudata_shr 0 0 ABS 0 udata_shr -
+__Ludata_shr 0 0 ABS 0 udata_shr -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
