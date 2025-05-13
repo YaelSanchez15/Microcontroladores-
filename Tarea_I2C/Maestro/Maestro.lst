@@ -1,0 +1,323 @@
+CCS PCM C Compiler, Version 5.015, 5967               12-May-25 18:43
+
+               Filename:   C:\Users\yaeli\Downloads\OCTAVO semestre\Microcontroladores Teoria\Tarea_I2C\Maestro\Maestro.lst
+
+               ROM used:   251 words (3%)
+                           Largest free fragment is 2048
+               RAM used:   6 (2%) at main() level
+                           9 (2%) worst case
+               Stack used: 2 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   0BC
+0003:  NOP
+.................... #include <16F887.h> 
+.................... //////////// Standard Header file for the PIC16F887 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F887 
+....................  
+.................... #list 
+....................  
+.................... #use delay(clock=20M, crystal=20000000) 
+0004:  MOVLW  23
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   017
+000A:  MOVLW  06
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  7B
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  DECFSZ 00,F
+0016:  GOTO   00A
+0017:  RETURN
+.................... #use I2C(MASTER, SDA=PIN_C4, SCL=PIN_C3, SLOW)        // Configuración del bus I2C 
+0018:  MOVLW  08
+0019:  MOVWF  78
+001A:  MOVLW  04
+001B:  MOVWF  77
+001C:  DECFSZ 77,F
+001D:  GOTO   01C
+001E:  BCF    07.3
+001F:  BCF    20.3
+0020:  MOVF   20,W
+0021:  BSF    03.5
+0022:  MOVWF  07
+0023:  MOVLW  03
+0024:  MOVWF  77
+0025:  DECFSZ 77,F
+0026:  GOTO   025
+0027:  BCF    03.5
+0028:  RLF    23,F
+0029:  BCF    07.4
+002A:  BTFSS  03.0
+002B:  GOTO   032
+002C:  BSF    20.4
+002D:  MOVF   20,W
+002E:  BSF    03.5
+002F:  MOVWF  07
+0030:  GOTO   036
+0031:  BCF    03.5
+0032:  BCF    20.4
+0033:  MOVF   20,W
+0034:  BSF    03.5
+0035:  MOVWF  07
+0036:  NOP
+0037:  BCF    03.5
+0038:  BSF    20.3
+0039:  MOVF   20,W
+003A:  BSF    03.5
+003B:  MOVWF  07
+003C:  BCF    03.5
+003D:  BTFSS  07.3
+003E:  GOTO   03D
+003F:  DECFSZ 78,F
+0040:  GOTO   01A
+0041:  MOVLW  04
+0042:  MOVWF  77
+0043:  DECFSZ 77,F
+0044:  GOTO   043
+0045:  BCF    07.3
+0046:  BCF    20.3
+0047:  MOVF   20,W
+0048:  BSF    03.5
+0049:  MOVWF  07
+004A:  NOP
+004B:  BCF    03.5
+004C:  BSF    20.4
+004D:  MOVF   20,W
+004E:  BSF    03.5
+004F:  MOVWF  07
+0050:  MOVLW  03
+0051:  MOVWF  77
+0052:  DECFSZ 77,F
+0053:  GOTO   052
+0054:  MOVLW  03
+0055:  MOVWF  77
+0056:  DECFSZ 77,F
+0057:  GOTO   056
+0058:  BCF    03.5
+0059:  BSF    20.3
+005A:  MOVF   20,W
+005B:  BSF    03.5
+005C:  MOVWF  07
+005D:  BCF    03.5
+005E:  BTFSS  07.3
+005F:  GOTO   05E
+0060:  CLRF   78
+0061:  MOVLW  03
+0062:  MOVWF  77
+0063:  DECFSZ 77,F
+0064:  GOTO   063
+0065:  BTFSC  07.4
+0066:  BSF    78.0
+0067:  BCF    07.3
+0068:  BCF    20.3
+0069:  MOVF   20,W
+006A:  BSF    03.5
+006B:  MOVWF  07
+006C:  BCF    03.5
+006D:  BCF    07.4
+006E:  BCF    20.4
+006F:  MOVF   20,W
+0070:  BSF    03.5
+0071:  MOVWF  07
+0072:  BCF    03.5
+0073:  RETURN
+.................... #use standard_io(B) 
+....................  
+.................... #define boton_1 PIN_B0                                 // Pin del pulsador 1 
+.................... #define boton_2 PIN_B1                                 // Pin del pulsador 2 
+....................  
+.................... void enviar_dato_i2c(int8 address, int8 data);         // Declaración de la función para enviar datos por I2C 
+....................  
+.................... void main() 
+*
+00BC:  MOVF   03,W
+00BD:  ANDLW  1F
+00BE:  MOVWF  03
+00BF:  MOVLW  FF
+00C0:  MOVWF  20
+00C1:  BSF    03.5
+00C2:  BSF    03.6
+00C3:  MOVF   09,W
+00C4:  ANDLW  C0
+00C5:  MOVWF  09
+00C6:  BCF    03.6
+00C7:  BCF    1F.4
+00C8:  BCF    1F.5
+00C9:  MOVLW  00
+00CA:  BSF    03.6
+00CB:  MOVWF  08
+00CC:  BCF    03.5
+00CD:  CLRF   07
+00CE:  CLRF   08
+00CF:  CLRF   09
+00D0:  BCF    03.7
+.................... { 
+....................    set_tris_b(0x03);                                   // RB0 y RB1 como entradas, otros como salidas 
+00D1:  MOVLW  03
+00D2:  BSF    03.5
+00D3:  BCF    03.6
+00D4:  MOVWF  06
+....................     
+....................    while(true) 
+....................    { 
+....................       if(!input(boton_1))                              // Si se presiona el pulsador 1 (asumiendo pull-up) 
+00D5:  BSF    06.0
+00D6:  BCF    03.5
+00D7:  BTFSC  06.0
+00D8:  GOTO   0E6
+....................       { 
+....................          while(!input(boton_1));                       // Espera hasta que se suelte el botón 
+00D9:  BSF    03.5
+00DA:  BSF    06.0
+00DB:  BCF    03.5
+00DC:  BTFSS  06.0
+00DD:  GOTO   0D9
+....................          delay_ms(50);                                 // Anti-rebote 
+00DE:  MOVLW  32
+00DF:  MOVWF  23
+00E0:  CALL   004
+....................          enviar_dato_i2c(0xA0, 0x10);                 // Envia el dato 0x10 por I2C al esclavo 
+00E1:  MOVLW  A0
+00E2:  MOVWF  21
+00E3:  MOVLW  10
+00E4:  MOVWF  22
+00E5:  CALL   074
+....................       } 
+....................        
+....................       if(!input(boton_2))                              // Si se presiona el pulsador 2 (asumiendo pull-up) 
+00E6:  BSF    03.5
+00E7:  BSF    06.1
+00E8:  BCF    03.5
+00E9:  BTFSC  06.1
+00EA:  GOTO   0F8
+....................       { 
+....................          while(!input(boton_2));                       // Espera hasta que se suelte el botón 
+00EB:  BSF    03.5
+00EC:  BSF    06.1
+00ED:  BCF    03.5
+00EE:  BTFSS  06.1
+00EF:  GOTO   0EB
+....................          delay_ms(50);                                 // Anti-rebote 
+00F0:  MOVLW  32
+00F1:  MOVWF  23
+00F2:  CALL   004
+....................          enviar_dato_i2c(0xA0, 0x20);                  // Envia el dato 0x20 por I2C al esclavo 
+00F3:  MOVLW  A0
+00F4:  MOVWF  21
+00F5:  MOVLW  20
+00F6:  MOVWF  22
+00F7:  CALL   074
+....................       } 
+00F8:  BSF    03.5
+00F9:  GOTO   0D5
+....................    } 
+.................... } 
+....................  
+00FA:  SLEEP
+.................... void enviar_dato_i2c(int8 address, int8 data)         // Función de envío de datos por I2C 
+.................... { 
+....................    i2c_start();                                       // Iniciar comunicación 
+*
+0074:  BSF    20.4
+0075:  MOVF   20,W
+0076:  BSF    03.5
+0077:  MOVWF  07
+0078:  MOVLW  04
+0079:  MOVWF  77
+007A:  DECFSZ 77,F
+007B:  GOTO   07A
+007C:  BCF    03.5
+007D:  BSF    20.3
+007E:  MOVF   20,W
+007F:  BSF    03.5
+0080:  MOVWF  07
+0081:  MOVLW  03
+0082:  MOVWF  77
+0083:  DECFSZ 77,F
+0084:  GOTO   083
+0085:  BCF    03.5
+0086:  BCF    07.4
+0087:  BCF    20.4
+0088:  MOVF   20,W
+0089:  BSF    03.5
+008A:  MOVWF  07
+008B:  MOVLW  04
+008C:  MOVWF  77
+008D:  DECFSZ 77,F
+008E:  GOTO   08D
+008F:  BCF    03.5
+0090:  BCF    07.3
+0091:  BCF    20.3
+0092:  MOVF   20,W
+0093:  BSF    03.5
+0094:  MOVWF  07
+....................    i2c_write(address);                                // Dirección 
+0095:  BCF    03.5
+0096:  MOVF   21,W
+0097:  MOVWF  23
+0098:  CALL   018
+....................    i2c_write(data);                                   // Dato 
+0099:  MOVF   22,W
+009A:  MOVWF  23
+009B:  CALL   018
+....................    i2c_stop();                                        // Detener comunicación 
+009C:  BCF    20.4
+009D:  MOVF   20,W
+009E:  BSF    03.5
+009F:  MOVWF  07
+00A0:  NOP
+00A1:  BCF    03.5
+00A2:  BSF    20.3
+00A3:  MOVF   20,W
+00A4:  BSF    03.5
+00A5:  MOVWF  07
+00A6:  BCF    03.5
+00A7:  BTFSS  07.3
+00A8:  GOTO   0A7
+00A9:  MOVLW  04
+00AA:  MOVWF  77
+00AB:  DECFSZ 77,F
+00AC:  GOTO   0AB
+00AD:  GOTO   0AE
+00AE:  NOP
+00AF:  BSF    20.4
+00B0:  MOVF   20,W
+00B1:  BSF    03.5
+00B2:  MOVWF  07
+00B3:  MOVLW  04
+00B4:  MOVWF  77
+00B5:  DECFSZ 77,F
+00B6:  GOTO   0B5
+....................    delay_ms(50);                                      // Retardo 
+00B7:  MOVLW  32
+00B8:  BCF    03.5
+00B9:  MOVWF  23
+00BA:  CALL   004
+00BB:  RETURN
+.................... } 
+
+Configuration Fuses:
+   Word  1: 2FE2   HS NOWDT PUT MCLR NOPROTECT NOCPD BROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 3FFF   BORV40 NOWRT

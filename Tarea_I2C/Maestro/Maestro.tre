@@ -1,0 +1,11 @@
+ÀÄMaestro
+   ÀÄmain  0/63  Ram=0
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄenviar_dato_i2c  0/72  Ram=2
+      ³  ÃÄ@I2C_WRITE_1  0/92  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/92  Ram=1
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÀÄenviar_dato_i2c  0/72  Ram=2
+         ÀÄ*
